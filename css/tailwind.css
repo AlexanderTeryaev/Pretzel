@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+
+input:focus,
+select:focus,
+.form-control:focus,
+textarea:focus,
+button:focus {
+  @apply outline-none shadow-none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+-webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+header {
+  @apply flex justify-center
+}
+
+.dropdown {
+  @apply relative inline-block;
+}
+
+.btn {
+  @apply rounded-full px-8 py-3.5 font-bold;
+}
+.btn-purple {
+  @apply bg-purple2 text-white;
+}
+.btn-purple:hover {
+  @apply bg-purple1
+}
+
+.btn-green {
+  @apply bg-lightgreen text-gray2;
+}
+.btn-green:hover {
+  @apply bg-green
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-col-center {
+  @apply flex items-center flex-col;
+}
+
+.circle {
+  border-radius: 100%;
+  box-shadow: none;
+}
+.circle::before,
+.circle::after {
+  border-radius: 100%;
+}
+
+
+@tailwind utilities;
+
+@font-face {
+  font-family: 'TypoGrotesk';
+  src: url('../font/TypoGrotesk.woff') format('woff');
+  font-display: swap;
+}
+
+body {
+  font-family: 'TypoGrotesk'
+}
+
+
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.fit-content {
+  width: fit-content;
+}
