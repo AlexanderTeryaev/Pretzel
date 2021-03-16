@@ -30,14 +30,6 @@ input:-webkit-autofill:active
 -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-header {
-  @apply flex justify-center
-}
-
-.dropdown {
-  @apply relative inline-block;
-}
-
 .btn {
   @apply rounded-full px-8 py-3.5 font-bold;
 }
@@ -46,13 +38,6 @@ header {
 }
 .btn-purple:hover {
   @apply bg-purple1
-}
-
-.btn-green {
-  @apply bg-lightgreen text-gray2;
-}
-.btn-green:hover {
-  @apply bg-green
 }
 
 .flex-between {
