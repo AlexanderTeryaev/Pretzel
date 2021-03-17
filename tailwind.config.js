@@ -28,9 +28,6 @@ module.exports = {
       margin: {
 
       },
-      marginBottom: {
-        
-      },
       body: ['"TypoGrotesk"'],
       display: ['TypoGrotesk'],
       fontFamily: {
