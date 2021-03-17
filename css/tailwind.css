@@ -30,8 +30,21 @@ input:-webkit-autofill:active
 -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.btn {
-  @apply rounded-full px-8 py-3.5 font-bold;
+::-webkit-input-placeholder {
+  font-weight: normal;
+}
+:-moz-placeholder {
+  font-weight: normal; 
+}
+::-moz-placeholder {
+  font-weight: normal;  
+}
+:-ms-input-placeholder {  
+  font-weight: normal; 
+}
+
+header {
+  @apply flex justify-center
 }
 
 .flex-between {
@@ -55,6 +68,27 @@ input:-webkit-autofill:active
   border-radius: 100%;
 }
 
+.btn {
+  @apply rounded-full px-8 py-4 font-bold;
+}
+.btn-red {
+  @apply bg-red text-white;
+}
+.btn-red:hover {
+  @apply bg-red
+}
+
+.hero-section {
+  background: #fff url(../images/home-banner-without-cloud.svg) no-repeat;
+  @apply bg-bottom bg-contain h-screen;
+}
+
+.hero-mobile {
+  background: #fff url(../images/home-banner-without-cloud-mobile.svg) no-repeat;
+  width: 90vw;
+  @apply bg-bottom bg-contain h-screen;
+}
+
 
 @tailwind utilities;
 
@@ -67,8 +101,6 @@ input:-webkit-autofill:active
 body {
   font-family: 'TypoGrotesk'
 }
-
-
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
