@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        
+        7: '1.75rem',
+        20: '5rem'
       },
       height: {
         
@@ -13,12 +14,10 @@ module.exports = {
         
       },
       minWidth: {
-        '120': '30rem',
-        '84': '21rem',
-        '64': '16rem'
+        
       },
       maxWidth: {
-        '8xl': '120rem'
+        
       },   
       minHeight: {
         '100vh': '100vh'
@@ -59,6 +58,7 @@ module.exports = {
         gray4: '#D3D3D4',
         gray5: '#FAF7FB',
         gray6: '#F4F4F4',
+        gray7: '#E9EAEA',
         purple: '#7D0080',
         darkpurple: '#260426',
         lightpurple: '#800180',
