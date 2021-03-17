@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontSize: {
         7: '1.75rem',
+        50: '50px',
+        67: '67px',
         20: '5rem'
       },
       height: {
@@ -62,7 +64,8 @@ module.exports = {
         purple: '#7D0080',
         darkpurple: '#260426',
         lightpurple: '#800180',
-        red: '#E4255C'
+        red: '#E4255C',
+        darkblue: '#0F1D2B'
       },
       zIndex: {
         '-1': '-1',

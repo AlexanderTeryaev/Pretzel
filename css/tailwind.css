@@ -80,6 +80,12 @@ header {
 .btn-red:hover {
   @apply bg-red
 }
+.btn-purple {
+  @apply bg-lightpurple text-white;
+}
+.btn-purple:hover {
+  @apply bg-purple;
+}
 
 .hero-section {
   background: #fff url(../images/home-banner-without-cloud.svg) no-repeat;
