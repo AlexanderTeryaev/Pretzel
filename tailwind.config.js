@@ -41,7 +41,10 @@ module.exports = {
         
       },
       borderRadius: {
-        
+        30: '7.5rem'
+      },
+      borderWidth: {
+        10: '2.5rem'
       },
       opacity: {
         
@@ -54,6 +57,8 @@ module.exports = {
         gray2:'#4F5154',
         gray3: '#232529',
         gray4: '#D3D3D4',
+        gray5: '#FAF7FB',
+        gray6: '#F4F4F4',
         purple: '#7D0080',
         darkpurple: '#260426',
         lightpurple: '#800180',

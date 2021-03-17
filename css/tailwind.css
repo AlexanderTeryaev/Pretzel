@@ -74,6 +74,9 @@ header {
 .btn-red {
   @apply bg-red text-white;
 }
+.btn-white {
+  @apply bg-white text-lightpurple
+}
 .btn-red:hover {
   @apply bg-red
 }
