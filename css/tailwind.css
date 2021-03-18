@@ -81,10 +81,7 @@ header {
   @apply bg-white border border-red text-red hover:bg-red hover:text-white;
 }
 .btn-purple {
-  @apply bg-lightpurple text-white;
-}
-.btn-purple:hover {
-  @apply bg-purple;
+  @apply bg-lightpurple border border-transparent text-white hover:bg-white hover:text-lightpurple hover:border-lightpurple;
 }
 
 .hero-section {
