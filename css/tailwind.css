@@ -80,6 +80,12 @@ header {
 .btn-purple-outline {
   @apply bg-white border border-red text-red hover:bg-red hover:text-white;
 }
+.btn-purple {
+  @apply bg-lightpurple text-white;
+}
+.btn-purple:hover {
+  @apply bg-purple;
+}
 
 .hero-section {
   background: #fff url(../images/home-banner-without-cloud.svg) no-repeat;
