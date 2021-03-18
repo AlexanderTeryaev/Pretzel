@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Not Found</title>
+    <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=qsoryock2pvnkksftvyera" async="true"></script>
+    <script type="text/javascript" src="./scripts/common.js" async="true"></script>
+    <link href="css/tailwind.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+
+      <!-- Header -->
+      <header>
+        <div id="header" class="flex-center py-4 px-20 max-sm:px-4 bg-transparent absolute w-full z-999 max-w-8xl">
+          <div class="flex-between w-full">
+            <img class="cursor-pointer" src="icons/dark-logo.svg" alt="" />
+            <div class="flex-center font-bold text-gray1 text-sm max-lg:hidden">
+              <a class="mr-10">Why Pretzel</a>
+              <a class="mr-10">Plans</a>
+              <a class="mr-10">Resources</a>
+              <a class="mr-10">FAQ</a>
+              <a>Get a Quote</a>
+            </div>
+            <div class="flex-center max-lg:hidden">
+              <button class="text-red text-sm font-bold mr-6">Login</button>
+              <button class="btn-red btn">
+                Start Free Trial
+              </button>
+            </div>
+            
+            <img id="hamburger" onclick="show_sidemenu()" class="cursor-pointer hidden max-lg:block" src="icons/hamburger.svg" alt="" />
+          </div>
+        </div>
+        <div id="side-bg" onclick="hide_sidemenu()" class="hidden h-full w-full fixed top-0 left-0 cursor-pointer overflow-hidden bg-black bg-opacity-50 z-9999"></div>
+        <div id="side-menu" class="fixed w-72 h-full -right-72 top-0 z-9999 overflow-x-hidden bg-white transition-right duration-700">
+          <div class="flex flex-col px-4 py-2 font-bold text-gray1 text-sm">
+            <div class="text-right text-4xl mb-2">
+              <a class="p-2" onclick="hide_sidemenu()" href="javascript:void(0)">×</a>
+            </div>
+            <a href="#" class="mb-4">Why Pretzel</a>
+            <a href="#" class="mb-4">Plans</a>
+            <a href="#" class="mb-4">Resources</a>
+            <a href="#" class="mb-4">FAQ</a>
+            <a href="#" class="mb-8">Get a Quote</a>
+            <button class="text-red text-sm font-bold mb-4">Login</button>
+            <button class="btn-red btn">
+              Start Free Trial
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="pt-40 pb-16 max-md:pt-20 h-screen flex my-auto">
+        <div class="flex max-md:flex-col bg-section w-full">
+          <div class="max-md:w-full w-5/12 max-md:px-4 flex flex-col justify-center">
+            <div class="mx-auto max-md:mx-0 py-4">
+              <div class="text-207 max-sm:text-9xl text-lightpurple">404</div>
+              <div class="text-xl max-sm:text-lg -mt-10 max-md:mt-4 mb-4 text-gray3">Looks like you may be lost.</div>
+              <div class="text-xl max-sm:text-lg mb-10 text-gray3">Why don’t you head back home?</div>  
+              <button class="btn-red btn">
+                Take Me Home
+              </button>
+            </div>
+          </div> 
+          <div class="max-3xl:hidden max-md:block w-full flex-1 pt-10">
+            <img src="images/bg-404.svg" alt="">   
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('document ready')
+    window.addEventListener('scroll', handleScroll)
+  })    
+</script>
+<style>
+  /* Header */
+  .fixed-header {
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    min-height: 75px;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideInDown {
+    0% {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateZ(0);
+    }
+  }
+
+  .bg-section {
+    background: #fff url(./images/bg-404.svg) no-repeat;
+    background-size: 900px;
+    background-position: calc(100% - 50px) 50%;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .bg-section {
+      background-position: 125%;
+      background-size: 900px;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) and (min-width: 1025px) and (max-width: 1290px) {
+    .bg-section {
+      background-position: 125%;
+      background-size: 65%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .bg-section {
+      background-size: 68%;
+      background-position: 125%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bg-section {
+      background: none;
+    }
+  }  
+</style>
