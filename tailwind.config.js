@@ -62,6 +62,7 @@ module.exports = {
         gray8: '#65676A',
         gray9: '#898A8D',
         gray10: '#200A52',
+        gray11: '#F8F6F8',
         purple: '#7D0080',
         darkpurple: '#260426',
         lightpurple: '#800180',
