@@ -9,7 +9,8 @@ module.exports = {
         14: '3.5rem',
         50: '50px',
         67: '67px',
-        20: '5rem'
+        20: '5rem',
+        207: '207px'
       },
       lineHeight: {
         15: '3.75rem'
@@ -66,6 +67,7 @@ module.exports = {
         gray8: '#65676A',
         gray9: '#898A8D',
         gray10: '#200A52',
+        gray11: '#F8F6F8',
         gray12: '#BDBEBF',
         purple: '#7D0080',
         darkpurple: '#260426',
