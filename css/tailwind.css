@@ -72,13 +72,13 @@ header {
   @apply rounded-full px-8 py-4 font-bold;
 }
 .btn-red {
-  @apply bg-red text-white;
+  @apply bg-red border border-transparent text-white hover:bg-white hover:text-red hover:border-red
 }
 .btn-white {
   @apply bg-white text-lightpurple
 }
-.btn-red:hover {
-  @apply bg-red
+.btn-purple-outline {
+  @apply bg-white border border-red text-red hover:bg-red hover:text-white;
 }
 
 .hero-section {
@@ -96,13 +96,13 @@ header {
 @tailwind utilities;
 
 @font-face {
-  font-family: 'TypoGrotesk';
-  src: url('../font/TypoGrotesk.woff') format('woff');
+  font-family: 'DINNextLTPro';
+  src: url('../font/DINNextLTPro.woff2') format('woff2');
   font-display: swap;
 }
 
 body {
-  font-family: 'TypoGrotesk'
+  font-family: 'DINNextLTPro'
 }
 
 /* Scroll Bar */

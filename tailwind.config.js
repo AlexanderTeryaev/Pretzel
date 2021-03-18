@@ -28,10 +28,10 @@ module.exports = {
       margin: {
 
       },
-      body: ['"TypoGrotesk"'],
-      display: ['TypoGrotesk'],
+      body: ['"DINNextLTPro"'],
+      display: ['DINNextLTPro'],
       fontFamily: {
-        typoGrotesk: 'TypoGrotesk'
+        DINNextLTPro: 'DINNextLTPro'
       },
       letterSpacing: {
         
@@ -56,10 +56,12 @@ module.exports = {
         gray5: '#FAF7FB',
         gray6: '#F4F4F4',
         gray7: '#E9EAEA',
+        gray10: '#200A52',
         purple: '#7D0080',
         darkpurple: '#260426',
         lightpurple: '#800180',
-        red: '#E4255C'
+        red: '#E4255C',
+        green: '#44E0B7'
       },
       zIndex: {
         '-1': '-1',
