@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact</title>
+    <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=qsoryock2pvnkksftvyera" async="true"></script>
+    <script type="text/javascript" src="./scripts/common.js" async="true"></script>
+    <link href="css/tailwind.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+
+      <!-- Header -->
+      <header>
+        <div id="header" class="flex-center py-4 px-20 max-sm:px-4 bg-transparent absolute w-full z-999 max-w-8xl">
+          <div class="flex-between w-full">
+            <img class="cursor-pointer" src="icons/logo-white.svg" alt="" />
+            <div class="flex-center font-bold text-white text-sm max-lg:hidden">
+              <a class="mr-10">Why Pretzel</a>
+              <a class="mr-10">Plans</a>
+              <a class="mr-10">Resources</a>
+              <a class="mr-10">FAQ</a>
+              <a>Get a Quote</a>
+            </div>
+            <div class="flex-center max-lg:hidden">
+              <button class="text-white text-sm font-bold mr-6">Login</button>
+              <button class="btn text-red bg-white">
+                Start Free Trial
+              </button>
+            </div>
+            
+            <img id="hamburger" onclick="show_sidemenu()" class="cursor-pointer hidden max-lg:block" src="icons/hamburger.svg" alt="" />
+          </div>
+        </div>
+        <div id="side-bg" onclick="hide_sidemenu()" class="hidden h-full w-full fixed top-0 left-0 cursor-pointer overflow-hidden bg-black bg-opacity-50 z-9999"></div>
+        <div id="side-menu" class="fixed w-72 h-full -right-72 top-0 z-9999 overflow-x-hidden bg-white transition-right duration-700">
+          <div class="flex flex-col px-4 py-2 font-bold text-gray1 text-sm">
+            <div class="text-right text-4xl mb-2">
+              <a class="p-2" onclick="hide_sidemenu()" href="javascript:void(0)">×</a>
+            </div>
+            <a href="#" class="mb-4">Why Pretzel</a>
+            <a href="#" class="mb-4">Plans</a>
+            <a href="#" class="mb-4">Resources</a>
+            <a href="#" class="mb-4">FAQ</a>
+            <a href="#" class="mb-8">Get a Quote</a>
+            <button class="text-red text-sm font-bold mb-4">Login</button>
+            <button class="btn-red btn">
+              Start Free Trial
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="relative w-screen overflow-x-hidden">
+        <div class="pt-36 bg-header w-full inline-block">
+          <div class="mb-60 max-sm:mb-20"></div>
+        </div>
+
+        <!-- Detail Section -->
+        <div class="bg-contact w-full inline-block -mt-2">
+          <div class="max-w-6xl px-36 max-sm:px-4 py-16 max-sm:py-8 bg-white rounded-2xl mx-auto max-lg:mx-4 -mt-40 max-sm:-mt-24 mb-24 max-sm:mb-12">
+            <div class="text-gray1 text-67 max-sm:text-3xl text-center">Say hello!</div>
+            <div class="text-7 max-sm:text-xl text-lightpurple text-center mb-10 max-sm:mb-5">Get in touch with us using the form below.</div>
+            <div>
+              <div class="grid grid-cols-2 max-lg:grid-cols-1 gap-8">
+                <div class="w-full input-group">
+                  <input 
+                    id="first_name"
+                    class="inputAnimation" autocomplete="given-name"
+                    type="text"
+                    oninput="onTextValidation(event)"
+                  />
+                  <label>First Name</label>
+                  <div id="first_name_required" class="hidden text-red text-left text-xs">first name is required</div>
+                </div>
+                <div class="w-full input-group">
+                  <input 
+                    id="last_name"
+                    class="inputAnimation" autocomplete="family-name"
+                    type="text"
+                    oninput="onTextValidation(event)"
+                  />
+                  <label>Last Name</label>
+                  <div id="last_name_required" class="hidden text-red text-left text-xs">last name is required</div>
+                </div>
+                <div class="w-full input-group max-sm:cursor-pointer">
+                  <input 
+                    id="phone_number"
+                    class="inputAnimation" autocomplete="tel"
+                    type="text"
+                    oninput="onPhone(event)"
+                  />
+                  <label>Phone Number</label>
+                  <div id="phone_required" class="hidden text-red text-left text-xs">phone is required</div>
+                  <div id="phone_invalid" class="hidden text-red text-left text-xs">invalid phone</div>
+                </div>
+                <div class="w-full input-group">
+                  <input 
+                    id="email_address"
+                    class="inputAnimation" autocomplete="email"
+                    type="email"
+                    oninput="onEmail(event)"
+                  />
+                  <label>Email Address</label>
+                  <div id="email_required" class="hidden text-red text-left text-xs">email is required</div>
+                  <div id="email_invalid" class="hidden text-red text-left text-xs">invalid email</div>
+                </div>
+              </div>
+              <div class="w-full input-group my-8">
+                <input 
+                  id="subject_line"
+                  class="inputAnimation"
+                  type="text"
+                  oninput="onTextValidation(event)"
+                />
+                <label>Subject Line</label>
+                <div id="subject_line_required" class="hidden text-red text-left text-xs">subject line is required</div>
+              </div>
+              <div class="mb-8">
+                <div class="mb-2 text-gray8 ">Message</div>
+                <textarea  
+                  id="message"
+                  type="text" 
+                  class="w-full border border-gray12 rounded-lg px-6 py-4 h-48 max-sm:h-32" 
+                  placeholder="Type here..." 
+                  oninput="onTextValidation(event)"
+                ></textarea>
+                <div id="message_required" class="hidden text-red text-left text-xs">required</div>
+              </div>
+              <div class="flex-center">
+                <button class="btn btn-red max-sm:w-full" type="submit" onclick="form_submit(event)">Make Contact</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </main>
+      
+      <!-- Footer section -->
+      <div class="flex-center flex-col bg-darkpurple mx-auto pt-20 pb-24 max-sm:pt-10 max-sm:pb-20">
+        <div class="fit-content">
+          <div class="flex justify-between max-lg:flex-col">
+            <div class="mb-4">
+              <img class="cursor-pointer" src="icons/white-logo.svg" alt="" />
+            </div>
+            <div class="flex items-center max-sm:flex-col max-sm:items-start">
+              <div class="mr-9 max-sm:mr-0 text-white mb-4">
+                <div>Lets Stay in touch!</div>
+                <div class="text-xs">Subscribe to our newsletter</div>
+              </div>
+              <input class="text-gray2 px-8 py-4 rounded-full mr-4 max-sm:mr-0 mb-4 max-sm:w-full" placeholder="Enter email" type="email" autocomplete="email">
+              <button class="btn-red btn mb-4 max-sm:w-full">
+                Subscribe
+              </button>
+            </div>            
+          </div>
+          <hr class="border border-gray4 opacity-30 mb-12 mt-8 max-sm:mb-6 max-sm:mt-2"/>
+          <div class="grid grid-cols-2 max-lg:grid-cols-1 gap-32 max-lg:gap-4 text-white">
+            <div class="max-w-2xl grid grid-cols-3 max-sm:grid-cols-1 gap-32 max-sm:gap-4">
+              <div>
+                <a class="text-xl mb-6 font-bold block cursor-pointer">Plans</a>
+                <a class="text-xl mb-6 font-bold block cursor-pointer">FAQ</a>
+                <a class="text-xl mb-6 font-bold block cursor-pointer">Login</a>
+              </div>
+              <div>
+                <div class="text-xl mb-6 font-bold">Resources</div>
+                <a class="text-base  mb-6 block cursor-pointer">Blog</a>
+                <a class="text-base mb-6 block cursor-pointer">File A Claim</a>
+              </div>
+              <div>
+                <div class="text-xl mb-6 font-bold cursor-pointer">Apps</div>
+                <a class="text-base  mb-6 block cursor-pointer">iOS</a>
+                <a class="text-base mb-6 block cursor-pointer">Android</a>
+              </div>
+            </div>
+            <div class="flex justify-between max-sm:flex-col">
+              <div>
+                <div class="text-xl mb-6 font-bold cursor-pointer">Company</div>
+                <div class="flex max-sm:flex-col">
+                  <div class="mr-14 max-sm:mr-0">
+                    <a class="text-base  mb-6 block cursor-pointer">About</a>
+                    <a class="text-base mb-6 block cursor-pointer">Newsroom</a>
+                    <a class="text-base  mb-6 block cursor-pointer">Legal Stuff</a>
+                    <a class="text-base mb-6 block cursor-pointer">Join the Team</a>
+                  </div>
+                  <div>
+                    <a class="text-base  mb-6 block cursor-pointer">Transparency</a>
+                    <a class="text-base mb-6 block cursor-pointer">Giving Back</a>
+                    <a class="text-base  mb-6 block cursor-pointer">Terms of Service</a>
+                    <a class="text-base mb-6 block cursor-pointer">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+              <div class="max-sm:mt-4">
+                <div>
+                  <div class="flex-between mb-9 max-sm:mb-5">
+                    <a href=""><img src="icons/facebook.svg" alt=""></a>
+                    <a href=""><img src="icons/twitter.svg" alt=""></a>
+                    <a href=""><img src="icons/social3.svg" alt=""></a>
+                    <a href=""><img src="icons/social4.svg" alt=""></a>
+                  </div>
+                  <a class="text-base mb-6 block cursor-pointer">© Copyright 2021 Pretzel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('document ready')
+    window.addEventListener('scroll', handleScroll)
+  })
+  var inputElements = document.getElementsByClassName("inputAnimation");
+  
+  for (var i = 0; i < inputElements.length; i++) {
+    inputElements[i].addEventListener("focusout", function(event){
+      onFocusOutEvent(event.target);
+    });
+  }
+
+  function onFocusOutEvent(element){
+    if(element.value){
+      element.classList.add("has-content");
+    }else{
+      element.classList.remove("has-content");
+    }
+  }
+
+  var inputElements = document.getElementsByClassName("inputAnimation");
+  
+  for (var i = 0; i < inputElements.length; i++) {
+    inputElements[i].addEventListener("focusout", function(event){
+      onFocusOutEvent(event.target);
+    });
+  }
+
+  // Validation functions
+  function required_validation(val) {
+    if (val && val.length > 0)
+      return true;
+    else
+      return false;
+  }
+
+  function email_validatioin(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function length_validation(val, len) {
+    if (val && String(val).length == len)
+      return true;
+    else
+      return false;
+  }
+
+  // Show/hide element
+  function setItemDisplay(id, style) {
+    if (form_submitted)
+      document.getElementById(id).style.display = style;
+  }
+
+  // Form step1
+  const phone_length = 12;
+  function get_required_validation(value, id) {
+    if (required_validation(value)) {
+      setItemDisplay(id, 'none');
+      return true;
+    } else {
+      setItemDisplay(id, 'block');
+      return false;
+    }
+  }
+
+  function get_phone_validation(value) {
+    if (required_validation(value)) {
+      setItemDisplay('phone_required', 'none');
+      if (length_validation(value, phone_length)) {
+        setItemDisplay('phone_invalid', 'none');
+        return true;
+      } else {
+        setItemDisplay('phone_invalid', 'block');
+        return false;
+      }
+    } else {
+      setItemDisplay('phone_required', 'block');
+      setItemDisplay('phone_invalid', 'none');
+      return false;
+    }
+  }
+
+  function get_email_validation(value) {
+    if (required_validation(value)) {
+      setItemDisplay('email_required', 'none');
+      if (email_validatioin(value)) {
+        setItemDisplay('email_invalid', 'none');
+        return true;
+      } else {
+        setItemDisplay('email_invalid', 'block');
+        return false;
+      }
+    } else {
+      setItemDisplay('email_required', 'block');
+      setItemDisplay('email_invalid', 'none');
+      return false;
+    }
+  }
+
+  function onTextValidation(e) {
+    var id = e.target.id + "_required";
+    get_required_validation(e.target.value, id);
+  }  
+
+  function onPhone(e) {
+    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    e.target.value = !x[2] ? x[1] : x[1] + '-' + x[2] + (x[3] ? '-' + x[3] : '');
+    get_phone_validation(e.target.value);
+  }
+
+  function onEmail(e) {
+    get_email_validation(e.target.value);
+  }
+
+  var form_submitted = false;
+  function form_submit(e) {
+    e.preventDefault();
+    form_submitted = true;
+    
+    const emailaddress = document.getElementById('email_address').value;
+    const phonenumber = document.getElementById('phone_number').value;
+    const firstname = document.getElementById('first_name').value;
+    const lastname = document.getElementById('last_name').value;
+    const subjectline = document.getElementById('subject_line').value;
+    const message = document.getElementById('message').value;
+
+    const email_valid = get_email_validation(emailaddress, 'email_address');
+    const phonenumber_valid = get_phone_validation(phonenumber, 'phone_number_required');
+    const firstname_valid = get_required_validation(firstname, 'first_name_required');
+    const lasstname_valid = get_required_validation(lastname, 'last_name_required');
+    const subjectline_valid = get_required_validation(subjectline, 'subject_line_required');
+    const message_valid = get_required_validation(message, 'message_required');
+
+    if (email_valid && phonenumber_valid && firstname_valid && lasstname_valid && subjectline_valid) {
+      // ajax call here
+
+    }
+  }
+
+</script>
+<style>
+  /* Header */
+  .fixed-header {
+    background-color: #E4255C;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    min-height: 75px;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideInDown {
+    0% {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateZ(0);
+    }
+  }
+
+  /* Another CSS */
+  .title-section {
+    background: #fff url(./images/bg-about-us.svg) no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+  @media (min-width: 1279px) and (max-width: 1920px) { 
+    .title-section {
+      height: 100vh;
+    } 
+  }
+  @media (min-width: 639px) and (max-width: 1279px) {
+    .title-section {
+      height: 80vh;
+    }
+  }
+  @media (max-width: 640px) {
+    .title-section {
+      height: 50vh;
+    }
+  }
+  .bg-header {
+    background: #E4255C url(./images/cloud-red.svg) no-repeat;
+    background-size: cover;
+  }
+  .bg-contact {
+    background: #fff url(./images/bg-contact.svg) no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: bottom;
+  }
+
+  /* Input */
+  input[type="text"]{width: 100% !important;color: #4F5154;}
+  input[type="email"]{width: 100% !important;color: #4F5154;}
+  .input-group{position: relative;z-index: 999;}
+  .inputAnimation{border: 0; border-bottom: 1px solid #BDBEBF; background-color: transparent;padding-top: 1rem;padding-bottom: 0.5rem;width: 100%;}
+  .inputAnimation ~ label{position: absolute; left: 0; width: 100%; top: 17px; color: #4F5154; transition: 0.3s; z-index: -1; text-align: left;}
+  .inputAnimation:focus ~ label, .has-content.inputAnimation ~ label{top: -16px; font-size: 12px; color: #4F5154; transition: 0.3s;}
+</style>

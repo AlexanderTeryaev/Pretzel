@@ -6,9 +6,13 @@ module.exports = {
       fontSize: {
         7: '1.75rem',
         11: '2.75rem',
+        14: '3.5rem',
         50: '50px',
         67: '67px',
         20: '5rem'
+      },
+      lineHeight: {
+        15: '3.75rem'
       },
       height: {
         
@@ -62,6 +66,7 @@ module.exports = {
         gray8: '#65676A',
         gray9: '#898A8D',
         gray10: '#200A52',
+        gray12: '#BDBEBF',
         purple: '#7D0080',
         darkpurple: '#260426',
         lightpurple: '#800180',
